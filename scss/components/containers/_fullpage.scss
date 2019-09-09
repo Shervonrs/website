@@ -1,0 +1,214 @@
+.fullpage_slide{
+  // @include flexbox($align-items: flex-start);
+  @include flexbox($align-items: baseline);
+  width: 100%;
+  height: 100%;
+  color: $white;
+  position: relative;
+  @media(min-width: 768px){
+    @include flexbox($align-items: center);
+  }
+}
+
+.title {
+  position: absolute;
+  z-index: 200;
+  overflow: hidden;
+  transform: translate3d(0,-50%,0);
+  margin-left: 11%;
+  top: 50%;
+  @media(max-width: 800px) {
+    margin-left: 40px;
+  }
+  @media(max-width: 420px) {
+    width: 87.5%;
+    margin: 0 6.25%;
+    top: auto;
+    bottom: -3.5rem;
+  }
+}
+
+.title--top {
+  @media(max-width: 420px) {
+    margin: 0 13%;
+    bottom: 26%;
+  }
+}
+.title_text {
+  line-height: 1;
+  font-size: 2.5rem;
+  margin-bottom: .8rem;
+  letter-spacing: 0.1em;
+  font-family: "Asap";
+  font-weight: normal;
+  text-shadow: 0 3px 10px rgba(2, 11, 22, 0.5);
+  @media (min-width: 325px) and (max-width: 375px) {
+    font-size: 2.8rem;
+  }
+  @media (min-width: 400px) and (max-width: 420px) {
+    font-size: 3rem;
+  }
+  @media(min-width: 768px) {
+    font-size: 3.5rem;
+  }
+  @media(min-width: 990px) {
+    font-size: 5.5rem;
+  }
+}
+
+.title ul {
+  padding-left: 0;
+}
+
+.title li {
+  margin-bottom: 1.6rem;
+  @media (max-width: 420px){
+    margin-bottom: 0.8rem;
+    line-height: 1.1;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  & a {
+    color: $white;
+  }
+}
+
+.title .border {
+  display: inline-block;
+  // margin-bottom: 2.2rem;
+  transform: translateX(0%) translateZ(0px);
+}
+
+.title .border span {
+  display: block;
+  width: 88px;
+  height: 4px;
+  border-radius: 5px;
+  background: #ff4d5a;
+  transform: translateX(0%) translateY(0%);
+  @media(max-width: 420px) {
+    width: 44px;
+    height: 2px
+  }
+  @media (max-width: 800px){
+    width: 70px;
+  }
+  &:first-child {
+    margin-bottom: 1.4rem;
+    @media (max-width: 420px) {
+      margin-bottom: 0.7rem;
+    }
+  }
+  &:last-child {
+    margin-left: 54px;
+    @media(max-width: 420px){
+      margin-left: 27px;
+    }
+    @media(max-width: 800px){
+      margin-left: 43px;
+    }
+  }
+}
+
+.title_lead {
+  transform: translateX(0%) translateY(0%);
+  font-size: 2rem;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  @media(max-width: 800px){
+    font-size: 2.4rem;
+    line-height: 1.4;
+  }
+  @media (min-width: 320px) and (max-width: 420px){
+    font-size: 1rem;
+  }
+}
+
+.image {
+  transform: scale(1) translateX(0%) translateZ(0px);
+  display: block;
+  position: relative;
+  width: 53.125%;
+  height: 74.81%;
+  margin: 0 8% 0 auto;
+  box-shadow: 0 80px 140px -40px rgba(0, 0, 0, 0.6);
+  @media (max-width: 420px){
+    width: 80%;
+    height: 55.633%;
+    margin: 0 10%;
+    top: 9.859%
+  }
+}
+
+.btn-wrap{
+  margin-top: 3.2rem;
+  @media(max-width: 800px){
+    margin-top: 1.6rem;
+  }
+  @media(max-width: 420px){
+    margin-top: 0.8rem;
+    text-align: center;
+  }
+}
+
+.btn {
+  display: inline-block;
+  font-size: 1.8rem;
+  color: $primary;
+  background: $white;
+  line-height: 1;
+  font-weight: bold;
+  padding: 18px 32px;
+  border-radius: 50px;
+  transition: .3s;
+  letter-spacing: 0.1em;
+  @media(max-width: 800px){
+    padding: 13px 24px;
+    font-size: 1.8rem;
+  }
+  @media(max-width: 420px){
+    font-size: 1.2rem;
+  }
+}
+
+.image--projects {
+  background: url('../img/bay.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.image--works {
+  background: url('../img/brush.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.image--contact {
+  background: url('../img/purp.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.page-num {
+  position: absolute;
+  overflow-y: hidden;
+  right: -7.5490%;
+  bottom: -12.3762%;
+  font-size: 13rem;
+  color: $white;
+  font-family: "Chivo";
+  z-index: 200;
+  @media(max-width: 800px){
+    font-size: 7.5rem;
+    right: -5%
+  }
+  @media (max-width: 420px) {
+    display: none;
+  }
+  & p {
+    transform: translateY(0%) translateZ(0px);
+    line-height: 1.1;
+    text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5);
+    @media(max-width: 420px){
+      text-shadow: 0 3px 10px rgba(2, 11, 22, 0.5);
+    }
+  }
+}

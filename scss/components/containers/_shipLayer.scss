@@ -1,0 +1,60 @@
+.ship {
+  @include flexbox($dir: column, $align-items: center)
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+.ship_img {
+  position: absolute;
+  width: 100vh;
+  height: 100%;
+}
+
+.layer {
+  width: 100vh;
+  height: 100%;
+}
+
+.ship_text-wrap {
+  position: absolute;
+  top: 75%;
+  left: 31%;
+  @media (min-width: 325px) and (max-width: 360px) {
+    top: 84%;
+    left:35%;
+  }
+  @media(min-width: 375px) {
+    left: 38%;
+  }
+  @media(min-width: 411px) {
+    left: 38%;
+  }
+  @media(min-width: 768px) {
+    left: 45%;
+  }
+  @media(min-width: 990px) {
+    left: 34%;
+  }
+}
+
+.ship_text {
+  font-size: 6.4rem;
+  color: $white;
+  letter-spacing: .1em;
+  text-shadow: 0 10px 15px rgba(2, 11, 22, 0.2);
+  opacity:1;
+  transform: translateX(0%) translateY(0%);
+  @media(max-width: 800px){
+    font-size: 3.2rem;
+  }
+  @media(max-width: 420px){
+    font-size: 2.4rem;
+    text-shadow:0 4px 6px rgba(2, 11, 22, 0.2);
+  }
+}
+
+p {
+  line-height: 2;
+  word-wrap: break-word;
+  white-space: normal;
+}
