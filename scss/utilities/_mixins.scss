@@ -15,3 +15,8 @@ $align-self: null) {
   align-self: $align-self;
   align-items: $align-items;
 }
+
+@mixin bk ($bkUrl: null) {
+  background: $bkUrl no-repeat;
+  // background-size: 100%;
+}

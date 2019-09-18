@@ -64,7 +64,7 @@ function browif(){
   .pipe(source('bundle.min.js'))
   .pipe(buffer())
   .pipe(sourcemaps.init({loadMaps: true}))
-  .pipe(terser())
+  // .pipe(terser())
   .on('error', log.error)
   .pipe(sourcemaps.write('./'))
   .pipe(gulp.dest('js'))

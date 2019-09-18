@@ -1,6 +1,6 @@
 
 header {
-  @include flexbox($dir:row, $just: space-between);
+  @include flexbox( $just: space-between);
   position: fixed;
   top: 0;
   left:0;
@@ -12,16 +12,26 @@ header {
   }
 };
 
+header a {
+  color: $white;
+  transition: 0.3s;
+}
+
 header .name {
-  text-decoration: none;
-  font-size: 24px;
-  letter-spacing: .1em;
+  font-size: 2.4rem;
+  letter-spacing: 0.1em;
   position: relative;
-  font-family: futura_r;
+  font-family: 'futura_r';
+  z-index: 1000;
   &:hover {
     opacity: .8;
     color:$white;
   }
+}
+
+header .container {
+  @include flexbox();
+  position: relative;
 }
 
 .fa,
@@ -38,9 +48,10 @@ header .name {
 }
 
 .icons {
-  display: none;
-  @media(min-width: 768px){
-    display: block;
+  display: flex;
+  margin-right: 6.4rem;
+  @media screen and (max-width: 420px){
+    display: none;
   }
 }
 
@@ -49,10 +60,97 @@ header .name {
   width: 50px;
   height: 22px;
   position: relative;
-  border: 1px solid black;
+  @media screen and (max-width: 420px){
+    width: 25px;
+    height: 15px;
+  }
+  &.js-menuOpen:before{
+    bottom: 50%;
+    transform: rotate(-45deg) translate3d(0, 50%, 0)
+  }
+  &.js-menuOpen:after{
+    top: 50%;
+    transform: rotate(45deg) translate3d(0, -50%, 0);
+  }
+  &:after,&:before {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: $white;
+    position: absolute;
+    right: 0;
+    transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  }
+  &:before {
+    bottom: 0;
+  }
+  &:after {
+    top: 0;
+  }
+}
+
+header .navigation {
+  background-image:linear-gradient(to right, #072142, #8c2b7a 42%, #ff4d5a);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include flexbox($just: center, $align-items: center);
+  transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transform: translate3d(0, -100%, 0);
+  z-index: -100;
+  &.js-open {
+    transform: translate3d(0, 0, 0);
+    & a {
+      transform: translate3d(0,0,0);
+    }
+  }
 }
 
 .navList {
+  text-align: center;
   color: $white;
-  display: none;
+  & li {
+    margin-top: 7.2rem;
+    position: relative;
+    padding: 0 153px;
+    overflow: hidden;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  & a{
+    display: inline-block;
+    color: $white;
+    font-size: 7rem;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    font-family: "Chivo";
+    font-weight: normal;
+    text-shadow: 0 10px 30px rgba(2, 11, 22, 0.2);
+    transform: translate3d(0, 100%, 0);
+    transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s;
+  }
+}
+
+.curtain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #020b16;
+  z-index: 99999;
+  transform: translate3d(0, 100%, 0);
+}
+
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background:#020b16;
+  top: 0;
+  left: 0;
+  transform:translateY(100%) translateZ(0px);
 }

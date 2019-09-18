@@ -1,5 +1,70 @@
+.cloud-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -100;
+  @media(max-width: 420px) {
+    height: 100%;
+    bottom: 0;
+    margin: auto;
+    max-height: 667px;
+  }
+}
+
+.cloudLayer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 29.427%;
+  margin: auto;
+  height: 1385px;
+  width: 1385px;
+  z-index: -100;
+  @media(max-width: 800px){
+    width: 100vw;
+    height: 100vw;
+    left: 23%;
+  }
+  @media(max-width: 420px){
+    width: 165vw;
+    height: 165vw;
+    left: 50%;
+    top: -10rem;
+    bottom: auto;
+    transform: translate3d(-50%, 0,0);
+  }
+}
+
+.cloudlayer_wrap {
+  width:100%;
+  height: 100%;
+}
 
 .cloudlayer_img {
-  background: url("../img/cloud-03.svg") no-repeat;
-  background-size: 100%;
+  &.cl-01 {
+    @include bk($bkUrl: url('../img/cloud-01.svg'))
+  }
+  &.cl-01-a {
+    @include bk($bkUrl: url("../img/cloud-01-a.svg"))
+  }
+  &.cl-02 {
+    @include bk($bkUrl: url("../img/cloud-02.svg"))
+  }
+  &.cl-02-b {
+    @include bk($bkUrl: url("../img/cloud-02-b.svg"))
+  }
+  &.cl-02-a {
+    @include bk($bkUrl: url("../img/cloud-02-a.svg"))
+  }
+  &.cl-03 {
+    @include bk($bkUrl: url("../img/cloud-03.svg"))
+  }
+  &.cl-03-a {
+    @include bk($bkUrl: url("../img/cloud-03-a.svg"))
+  }
+  &.cl-03-b {
+    @include bk($bkUrl: url("../img/cloud-03-b.svg"))
+  }
 }

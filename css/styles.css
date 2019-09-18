@@ -2,10 +2,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -23,17 +19,30 @@ header {
   }
 }
 
+header a {
+  color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 header .name {
-  text-decoration: none;
-  font-size: 24px;
-  letter-spacing: .1em;
+  font-size: 2.4rem;
+  letter-spacing: 0.1em;
   position: relative;
-  font-family: futura_r;
+  font-family: 'futura_r';
+  z-index: 1000;
 }
 
 header .name:hover {
   opacity: .8;
   color: #fff;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
 }
 
 .fa,
@@ -50,12 +59,15 @@ header .name:hover {
 }
 
 .icons {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 6.4rem;
 }
 
-@media (min-width: 768px) {
+@media screen and (max-width: 420px) {
   .icons {
-    display: block;
+    display: none;
   }
 }
 
@@ -64,12 +76,132 @@ header .name:hover {
   width: 50px;
   height: 22px;
   position: relative;
-  border: 1px solid black;
+}
+
+@media screen and (max-width: 420px) {
+  .menuIcon {
+    width: 25px;
+    height: 15px;
+  }
+}
+
+.menuIcon.js-menuOpen:before {
+  bottom: 50%;
+  -webkit-transform: rotate(-45deg) translate3d(0, 50%, 0);
+          transform: rotate(-45deg) translate3d(0, 50%, 0);
+}
+
+.menuIcon.js-menuOpen:after {
+  top: 50%;
+  -webkit-transform: rotate(45deg) translate3d(0, -50%, 0);
+          transform: rotate(45deg) translate3d(0, -50%, 0);
+}
+
+.menuIcon:after, .menuIcon:before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  position: absolute;
+  right: 0;
+  -webkit-transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.menuIcon:before {
+  bottom: 0;
+}
+
+.menuIcon:after {
+  top: 0;
+}
+
+header .navigation {
+  background-image: -webkit-gradient(linear, left top, right top, from(#072142), color-stop(42%, #8c2b7a), to(#ff4d5a));
+  background-image: linear-gradient(to right, #072142, #8c2b7a 42%, #ff4d5a);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+  z-index: -100;
+}
+
+header .navigation.js-open {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+header .navigation.js-open a {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 
 .navList {
+  text-align: center;
   color: #fff;
-  display: none;
+}
+
+.navList li {
+  margin-top: 7.2rem;
+  position: relative;
+  padding: 0 153px;
+  overflow: hidden;
+}
+
+.navList li:first-child {
+  margin-top: 0;
+}
+
+.navList a {
+  display: inline-block;
+  color: #fff;
+  font-size: 7rem;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  font-family: "Chivo";
+  font-weight: normal;
+  text-shadow: 0 10px 30px rgba(2, 11, 22, 0.2);
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+  -webkit-transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s;
+  transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s;
+}
+
+.curtain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #020b16;
+  z-index: 99999;
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+}
+
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #020b16;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(100%) translateZ(0px);
+          transform: translateY(100%) translateZ(0px);
 }
 
 .fullpage_slide {
@@ -471,9 +603,90 @@ p {
   white-space: normal;
 }
 
-.cloudlayer_img {
+.cloud-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -100;
+}
+
+@media (max-width: 420px) {
+  .cloud-background {
+    height: 100%;
+    bottom: 0;
+    margin: auto;
+    max-height: 667px;
+  }
+}
+
+.cloudLayer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 29.427%;
+  margin: auto;
+  height: 1385px;
+  width: 1385px;
+  z-index: -100;
+}
+
+@media (max-width: 800px) {
+  .cloudLayer {
+    width: 100vw;
+    height: 100vw;
+    left: 23%;
+  }
+}
+
+@media (max-width: 420px) {
+  .cloudLayer {
+    width: 165vw;
+    height: 165vw;
+    left: 50%;
+    top: -10rem;
+    bottom: auto;
+    -webkit-transform: translate3d(-50%, 0, 0);
+            transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.cloudlayer_wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.cloudlayer_img.cl-01 {
+  background: url("../img/cloud-01.svg") no-repeat;
+}
+
+.cloudlayer_img.cl-01-a {
+  background: url("../img/cloud-01-a.svg") no-repeat;
+}
+
+.cloudlayer_img.cl-02 {
+  background: url("../img/cloud-02.svg") no-repeat;
+}
+
+.cloudlayer_img.cl-02-b {
+  background: url("../img/cloud-02-b.svg") no-repeat;
+}
+
+.cloudlayer_img.cl-02-a {
+  background: url("../img/cloud-02-a.svg") no-repeat;
+}
+
+.cloudlayer_img.cl-03 {
   background: url("../img/cloud-03.svg") no-repeat;
-  background-size: 100%;
+}
+
+.cloudlayer_img.cl-03-a {
+  background: url("../img/cloud-03-a.svg") no-repeat;
+}
+
+.cloudlayer_img.cl-03-b {
+  background: url("../img/cloud-03-b.svg") no-repeat;
 }
 
 * {
@@ -501,7 +714,7 @@ body {
 .bkgColor {
   background: url("../img/background.svg") no-repeat;
   background-size: cover;
-  z-index: -100;
+  z-index: -200;
   position: fixed;
   width: 100%;
   height: 100%;
