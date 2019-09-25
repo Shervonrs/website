@@ -737,35 +737,43 @@ p {
 }
 
 .cloudlayer_img.cl-01 {
-  background: url("../img/cloud-01.svg") no-repeat;
+  background: url("../img/cloud-01.svg") no-repeat center;
+  background-size: cover;
 }
 
 .cloudlayer_img.cl-01-a {
-  background: url("../img/cloud-01-a.svg") no-repeat;
+  background: url("../img/cloud-01-a.svg") no-repeat center;
+  background-size: cover;
 }
 
 .cloudlayer_img.cl-02 {
-  background: url("../img/cloud-02.svg") no-repeat;
+  background: url("../img/cloud-02.svg") no-repeat center;
+  background-size: cover;
 }
 
 .cloudlayer_img.cl-02-b {
-  background: url("../img/cloud-02-b.svg") no-repeat;
+  background: url("../img/cloud-02-b.svg") no-repeat center;
+  background-size: cover;
 }
 
 .cloudlayer_img.cl-02-a {
-  background: url("../img/cloud-02-a.svg") no-repeat;
+  background: url("../img/cloud-02-a.svg") no-repeat center;
+  background-size: cover;
 }
 
 .cloudlayer_img.cl-03 {
-  background: url("../img/cloud-03.svg") no-repeat;
+  background: url("../img/cloud-03.svg") no-repeat center;
+  background-size: cover;
 }
 
 .cloudlayer_img.cl-03-a {
-  background: url("../img/cloud-03-a.svg") no-repeat;
+  background: url("../img/cloud-03-a.svg") no-repeat center;
+  background-size: cover;
 }
 
 .cloudlayer_img.cl-03-b {
-  background: url("../img/cloud-03-b.svg") no-repeat;
+  background: url("../img/cloud-03-b.svg") no-repeat center;
+  background-size: cover;
 }
 
 .page-top {
@@ -1304,7 +1312,7 @@ p {
   color: #072142;
   letter-spacing: 0.2em;
   line-height: 1.2;
-  font-family: "futura_de";
+  font-family: "asap";
 }
 
 @media screen and (max-width: 420px) {
@@ -1609,6 +1617,128 @@ p {
 @media screen and (max-width: 420px) {
   .footer a:first-child {
     margin-bottom: 0.8rem;
+  }
+}
+
+.page-top .image__projects {
+  background: url("../img/bay.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.meta {
+  padding-top: 7.2rem;
+  position: relative;
+}
+
+.meta_back {
+  width: 100%;
+  height: 70rem;
+  background: #f4f4f5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
+
+@media screen and (max-width: 800px) {
+  .meta_back {
+    height: 54rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .meta_back {
+    height: 45rem;
+  }
+}
+
+.meta_text-wrap {
+  padding: 0 8.58333% 0;
+}
+
+@media screen and (max-width: 420px) {
+  .meta_text-wrap {
+    padding: 0 7.5% 0;
+  }
+}
+
+.meta_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 7.2rem;
+}
+
+@media screen and (max-width: 420px) {
+  .meta_text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.meta_text li {
+  margin-right: 6.4rem;
+}
+
+@media screen and (max-width: 420px) {
+  .meta_text li {
+    margin-right: 0;
+    margin-bottom: 1.6rem;
+  }
+}
+
+.meta_text .small-title {
+  margin-bottom: 0.8rem;
+}
+
+@media screen and (max-width: 420px) {
+  .meta_text .small-title {
+    margin-bottom: 0.4rem;
+  }
+}
+
+.big-image {
+  width: 100%;
+  height: 116rem;
+  margin-top: 14.4rem;
+}
+
+.big-image.one {
+  background: url("../img/gameshow.png") no-repeat center;
+  background-size: cover;
+}
+
+.big-image.two {
+  background: url("../img/employee.png") no-repeat center;
+  background-size: cover;
+}
+
+.big-image.three {
+  background: url("../img/dashboard.png") no-repeat center;
+  background-size: cover;
+}
+
+.big-image.four {
+  background: url("../img/gallery.png") no-repeat center;
+  background-size: cover;
+}
+
+.big-image.five {
+  background: url("../img/form.png") no-repeat center;
+  background-size: cover;
+}
+
+.big-image.six {
+  background: url("../img/style.png") no-repeat center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 420px) {
+  .big-image {
+    margin-top: 7.2rem;
+    height: 13rem;
   }
 }
 

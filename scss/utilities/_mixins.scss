@@ -18,8 +18,8 @@ $align-self: null) {
 
 
 @mixin bk ($bkUrl: null) {
-  background: $bkUrl no-repeat;
-  // background-size: 100%;
+  background: $bkUrl no-repeat center;
+  background-size: cover;
 }
 
 

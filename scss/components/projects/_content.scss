@@ -1,0 +1,80 @@
+.page-top .image__projects {
+  @include bk($bkUrl: url("../img/bay.jpg"));
+}
+
+.meta {
+  padding-top: 7.2rem;
+  position: relative;
+}
+
+.meta_back{
+  width: 100%;
+  height: 70rem;
+  background: #f4f4f5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  @media screen and (max-width: 800px){
+    height: 54rem;
+  }
+  @media screen and (max-width: 420px){
+    height: 45rem;
+  }
+}
+
+.meta_text-wrap {
+  padding: 0 8.58333% 0;
+  @media screen and (max-width: 420px){
+    padding: 0 7.5% 0;
+  }
+}
+
+.meta_text {
+  @include flexbox();
+  margin-bottom: 7.2rem;
+  @media screen and (max-width: 420px){
+    flex-direction: column;
+  }
+  & li {
+    margin-right: 6.4rem;
+    @media screen and (max-width: 420px){
+      margin-right: 0;
+      margin-bottom: 1.6rem;
+    }
+  }
+  & .small-title {
+    margin-bottom: 0.8rem;
+    @media screen and (max-width: 420px){
+      margin-bottom: 0.4rem;
+    }
+  }
+}
+
+.big-image {
+  width: 100%;
+  height: 116rem;
+  &.one{
+    @include bk($bkUrl: url("../img/gameshow.png"));
+  }
+  &.two{
+    @include bk($bkUrl: url("../img/employee.png"));
+  }
+  &.three{
+    @include bk($bkUrl: url("../img/dashboard.png"));
+  }
+  &.four{
+    @include bk($bkUrl: url("../img/gallery.png"));
+  }
+  &.five{
+    @include bk($bkUrl: url("../img/form.png"));
+  }
+  &.six{
+    @include bk($bkUrl: url("../img/style.png"));
+  }
+  margin-top: 14.4rem;
+  @media screen and (max-width: 420px){
+    margin-top: 7.2rem;
+    height: 13rem;
+  }
+}
