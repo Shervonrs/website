@@ -49,6 +49,13 @@
   }
 }
 
+.back-arrow.js-color{
+  color: #020b16;
+}
+.back-arrow g {
+  stroke: currentColor;
+}
+
 .page-top .image__about{
   background: url('../img/brush.jpg') no-repeat center;
   background-size: cover;

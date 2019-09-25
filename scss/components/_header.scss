@@ -17,6 +17,15 @@ header a {
   transition: 0.3s;
 }
 
+header.js-color {
+  & a {
+    color: #020b16;
+  }
+  & .menuIcon:after,.menuIcon:before{
+    background: #020b16;
+  }
+}
+
 header .icons a {
   display: block;
   margin-right: 3.2rem;
@@ -98,6 +107,7 @@ header .container {
     top: 0;
   }
 }
+
 
 header .navigation {
   background-image:linear-gradient(to right, #072142, #8c2b7a 42%, #ff4d5a);

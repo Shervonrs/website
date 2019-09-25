@@ -36,7 +36,7 @@
   line-height: 1.1;
   @media screen and (max-width: 420px){
     padding-left: 3.2rem;
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
   &:after {
     content:"";
@@ -99,7 +99,7 @@
     margin-right: 0;
   }
   @media screen and (max-width: 420px){
-    padding-top: 0.2rem;
+    // padding-top: 0.2rem;
     font-size: 1.5rem;
   }
 }

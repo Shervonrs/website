@@ -839,6 +839,14 @@ p {
   }
 }
 
+.back-arrow.js-color {
+  color: #020b16;
+}
+
+.back-arrow g {
+  stroke: currentColor;
+}
+
 .page-top .image__about {
   background: url("../img/brush.jpg") no-repeat center;
   background-size: cover;
@@ -917,7 +925,7 @@ p {
 @media screen and (max-width: 420px) {
   .heading-num {
     padding-left: 3.2rem;
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -1015,7 +1023,6 @@ p {
 
 @media screen and (max-width: 420px) {
   .heading {
-    padding-top: 0.2rem;
     font-size: 1.5rem;
   }
 }
@@ -1327,7 +1334,7 @@ p {
 }
 
 .skill-set__high {
-  color: #1F2A5F;
+  color: #ff4d5a;
 }
 
 .skill-set_ratio {
@@ -1630,6 +1637,14 @@ header a {
   color: #fff;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+header.js-color a {
+  color: #020b16;
+}
+
+header.js-color .menuIcon:after, header.js-color .menuIcon:before {
+  background: #020b16;
 }
 
 header .icons a {
