@@ -1,0 +1,149 @@
+.wrapper .container {
+  margin-top: 20rem;
+  @media screen and (max-width: 420px){
+    margin-top: 12rem;
+  }
+}
+
+.text {
+  position: relative;
+  @include flexbox($align-items: center);
+  padding-left: 138px;
+  margin-top: 14.4rem;
+  @media screen and (max-width: 800px){
+    align-items: flex-start;
+    padding-left: 0;
+  }
+  @media screen and (max-width: 420px){
+    margin-top: 7.2rem;
+  }
+  &.text--top {
+    align-items: flex-start;
+  }
+  & .heading-num{
+    position: absolute;
+    left: 0;
+  }
+}
+
+.heading-num {
+  font-size: 4rem;
+  color: $primary;
+  position: relative;
+  padding-left: 6.2rem;
+  padding-right: 3.2rem;
+  font-family: "Abril Fatface";
+  line-height: 1.1;
+  @media screen and (max-width: 420px){
+    padding-left: 3.2rem;
+    font-size: 2rem;
+  }
+  &:after {
+    content:"";
+    width: 4.8rem;
+    height: 2px;
+    background: #020b16;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    @media screen and (max-width: 420px){
+      width: 2.4rem;
+    }
+  }
+}
+
+.content {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  @media screen and (max-width: 1250px){
+    padding: 0 10%;
+  }
+}
+
+.text_wrap {
+  @include flexbox($just:space-between, $align-items: center);
+  padding-right: 10%;
+  box-sizing: content-box;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  @media screen and (max-width: 800px){
+    flex-direction: column;
+    padding-left: 10%;
+  }
+}
+
+.text_wrap--top {
+  align-items: flex-start;
+  @media screen and (max-width: 800px){
+    align-items: center;
+  }
+}
+
+.heading--top {
+  padding-top: 0;
+}
+
+.heading {
+  font-size: 3rem;
+  color: #072142;
+  letter-spacing: 0.2em;
+  font-family: "asap";
+  margin-right: 3.2rem;
+  padding-top: 1.2rem;
+  @media screen and (max-width: 800px){
+    padding-top: 0;
+    margin-right: 0;
+  }
+  @media screen and (max-width: 420px){
+    padding-top: 0.2rem;
+    font-size: 1.5rem;
+  }
+}
+
+.who_wrap {
+  width: 48.333%;
+  @media screen and (max-width:800px){
+    width: 100%;
+    margin-top: 7.2rem;
+  }
+  @media screen and (max-width: 420px){
+    margin-top: 4rem;
+  }
+}
+
+.who_name {
+  color: #072142;
+  margin-bottom: 2.4rem;
+  @media screen and (max-width: 420px){
+    margin-bottom: 1.6rem;
+  }
+}
+
+.who_en {
+  font-size: 1.8rem;
+  letter-spacing: 0.2em;
+  font-family: "futura_de";
+  line-height: 1.3;
+  @media screen and (max-width: 420px){
+    font-size: 1rem;
+  }
+}
+
+.who_text {
+  margin-bottom: 6.4rem;
+  line-height: 2;
+  @media screen and (max-width: 420px){
+    margin-bottom: 3.2rem;
+  }
+}
+
+.who_image {
+  box-shadow: 0px 63px 154px -20px rgba(7, 33, 66, 0.5);
+  @media screen and (max-width: 420px){
+    box-shadow: 0px 33px 84px -20px rgba(7, 33, 66, 0.5);
+  }
+}

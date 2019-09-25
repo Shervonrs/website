@@ -17,6 +17,13 @@ header a {
   transition: 0.3s;
 }
 
+header .icons a {
+  display: block;
+  margin-right: 3.2rem;
+  font-size: 2.4rem;
+  letter-spacing: 0.1em;
+}
+
 header .name {
   font-size: 2.4rem;
   letter-spacing: 0.1em;
@@ -26,6 +33,9 @@ header .name {
   &:hover {
     opacity: .8;
     color:$white;
+  }
+  @media(max-width: 420px){
+    font-size: 1.6rem;
   }
 }
 
@@ -108,14 +118,21 @@ header .navigation {
   }
 }
 
-.navList {
+header .navList {
   text-align: center;
   color: $white;
+  & .js-open a {
+    transform: translate3d(0, 0, 0);
+  }
   & li {
     margin-top: 7.2rem;
     position: relative;
     padding: 0 153px;
     overflow: hidden;
+    @media(max-width: 420px){
+      padding: 0;
+      margin-top: 3.2rem;
+    }
     &:first-child {
       margin-top: 0;
     }
@@ -131,6 +148,25 @@ header .navigation {
     text-shadow: 0 10px 30px rgba(2, 11, 22, 0.2);
     transform: translate3d(0, 100%, 0);
     transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s;
+    @media(max-width: 800px) {
+      font-size: 4.6rem;
+    }
+    @media(max-width: 420px){
+      font-size: 2.5rem;
+      text-shadow: 0 3px 20px rgba(2, 11, 22, 0.2);
+    }
+  }
+}
+
+header .navList_sns {
+  display: none;
+  @media (max-width: 420px){
+    display: block;
+  }
+  & a {
+    font-size: 1.8rem;
+    margin-right: 2.4rem;
+    transform: translate3d(0, 150%, 0);
   }
 }
 

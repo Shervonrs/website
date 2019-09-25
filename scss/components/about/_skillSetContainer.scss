@@ -1,0 +1,240 @@
+.content--mlarge {
+  margin-top: 14.4;
+  @media screen and (max-width: 800px){
+    margin-top: 7.2rem;
+  }
+  @media screen and (max-width: 420px){
+    margin-top: 4rem;
+  }
+  @media screen and (max-width: 1250px){
+    padding: 0 10%;
+  }
+}
+
+.skill-set_flex {
+  @include flexbox($wrap: wrap, $just: space-between);
+  @media screen and (max-width: 800px){
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.skill-set_list{
+  width: 47%;
+  @media screen and (max-width: 800px){
+    width: 100%;
+    &:last-child {
+      margin-top: 7.2rem;
+    }
+  }
+}
+
+.skill-set_item{
+  margin-top: 6.4rem;
+  @include flexbox($just: space-between, $align-items: center);
+  @media screen and (max-width: 420px){
+    margin-top: 3.2rem;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.skill-set_icon {
+  width: 10.6382%;
+  align-self: center;
+}
+
+.skill-set_detail {
+  width: 85.1063%;
+}
+
+.skill-set_meta{
+  margin-bottom: 0.8rem;
+  @include flexbox($just:space-between)
+}
+
+.skill-set_name {
+  @include flexbox($align-items: flex-end)
+}
+
+.small-title {
+  font-size: 2.4rem;
+  color: #072142;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  font-family: "futura_de";
+  @media screen and (max-width: 420px){
+    font-size: 2.1rem;
+  }
+}
+
+.small-title--skill {
+  @media screen and (max-width: 420px){
+    font-size: 1.2rem;
+  }
+}
+
+.skill-set_year {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  color: #c0c5ca;
+  margin-left: 0.8rem;
+  letter-spacing: 0.2em;
+  @media screen and (max-width: 420px){
+    font-size: 1rem;
+  }
+}
+
+.skill-set__high{
+  color: $primary;
+}
+
+.skill-set_ratio {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  color: #072142;
+  @media screen and (max-width: 420px){
+    font-size: 1rem;
+  }
+}
+
+.skill-set__bar {
+  width: 100%;
+  height: 1.4rem;
+  background-color: $white;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px 0 rgba(7, 33, 66, 0.15);
+  &:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 10px;
+    width: 10%;
+  }
+  @media screen and (max-width: 420px) {
+    height: 0.7rem;
+  }
+}
+
+.skill-set__bar.p90:after{
+  @include skillsetP;
+}
+
+.skill-set__bar.p85:after{
+  @include skillsetP;
+}
+
+.skill-set__bar.p80:after{
+  @include skillsetP;
+}
+
+.skill-set__bar.p60:after{
+  @include skillsetP;
+}
+
+.skill-set__bar.p70:after{
+  @include skillsetP;
+}
+
+.skill-set__bar.p40:after{
+  @include skillsetP;
+}
+
+.skill-set__bar.p30:after{
+  @include skillsetP;
+}
+
+.skill-set__bar.p90.in:after{
+  @include skillsetPIn($speed: ratio90);
+}
+
+.skill-set__bar.p85.in:after{
+  @include skillsetPIn($speed: ratio85);
+}
+
+.skill-set__bar.p80.in:after{
+  @include skillsetPIn($speed: ratio80);
+}
+
+.skill-set__bar.p60.in:after{
+  @include skillsetPIn($speed: ratio60);
+}
+
+.skill-set__bar.p70.in:after{
+  @include skillsetPIn($speed: ratio70);
+}
+
+.skill-set__bar.p40.in:after{
+  @include skillsetPIn($speed: ratio40);
+}
+
+.skill-set__bar.p30.in:after{
+  @include skillsetPIn($speed: ratio30);
+}
+
+@keyframes ratio90 {
+  0% {
+    width: 10%;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+@keyframes ratio85 {
+  0% {
+    width: 10%;
+  }
+  to {
+    width: 85%;
+  }
+}
+
+@keyframes ratio80 {
+  0% {
+    width: 10%;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes ratio60 {
+  0% {
+    width: 10%;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes ratio70 {
+  0% {
+    width: 10%;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+@keyframes ratio40 {
+  0% {
+    width: 10%;
+  }
+  to {
+    width: 40%;
+  }
+}
+
+@keyframes ratio30 {
+  0% {
+    width: 10%;
+  }
+  to {
+    width: 30%;
+  }
+}

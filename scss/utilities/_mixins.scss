@@ -16,7 +16,17 @@ $align-self: null) {
   align-items: $align-items;
 }
 
+
 @mixin bk ($bkUrl: null) {
   background: $bkUrl no-repeat;
   // background-size: 100%;
+}
+
+
+@mixin skillsetP {
+  background-image: linear-gradient(to right, #072142, #8c2b7a 42%, #ff4d5a);
+}
+
+@mixin skillsetPIn ($speed: null){
+  animation: $speed 1.5s forwards;
 }

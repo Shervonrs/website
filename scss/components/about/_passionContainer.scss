@@ -1,0 +1,61 @@
+.content--mlarge {
+  margin-top: 14.4rem;
+  @media(max-width: 800px){
+    margin-top: 7.2rem;
+  }
+  @media(max-width: 420px){
+    margin-top: 4rem;
+  }
+}
+
+.passion_list{
+  @include flexbox($just: space-between, $wrap: wrap);
+  @media(max-width: 800px){
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+}
+
+.passion_item {
+  width: 29.75%;
+  @media(max-width: 800px){
+    width: 100%;
+    margin-top: 6.4rem;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  @media(max-width: 420px){
+    margin-top: 3.2rem;
+  }
+}
+
+.passion_image {
+  width: 42.016%;
+  margin: 0 auto 2.4rem;
+  @media(max-width: 800px){
+    width: 24.429%
+  }
+  @media(max-width: 420px){
+    margin-bottom: 1.6rem;
+  }
+}
+
+.sub-title {
+  font-size: 2rem;
+  margin-bottom: 1.6rem;
+  color: #072142;
+  text-align: center;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  font-family: "futura_de";
+  word-break: break-all;
+  @media(max-width: 420px){
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+  }
+}
+
+.passion_text {
+  line-height: 2;
+}

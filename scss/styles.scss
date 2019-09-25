@@ -1,7 +1,12 @@
 @import 'utilities/variables',
         'utilities/mixins',
-        'components/header',
+        'base/base',
         'components/containers/fullpage',
         'components/containers/shipLayer',
         'components/containers/bkglayer',
-        'base/base';
+        'components/about/pageTop',
+        'components/about/whoContainer',
+        'components/about/passionContainer',
+        'components/about/skillSetContainer',
+        'components/about/footer',
+        'components/header';
