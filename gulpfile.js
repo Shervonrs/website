@@ -42,34 +42,34 @@ function concatCSS(){
   .pipe(gulp.dest('css'))
   .pipe(browserSync.stream());
 }
-
-function javascript(){
-  return gulp.src(['./js/main.js' ])
-  .pipe(concat('/bundle.min.js'))
-  .pipe(terser())
-  .pipe(lineEC())
-  .pipe(gulp.dest('js'))
-  .pipe(browserSync.stream());
-}
-
-// function browif(){ correct one
-//   let b = browserify({
-//     entries: './js/main.js',
-//     debug: true,
-//     transform:[babelify.configure({
-//       presets:['babel-preset-env']
-//     })]
-//   })
-//   return b.bundle()
-//   .pipe(source('bundle.min.js'))
-//   .pipe(buffer())
-//   .pipe(sourcemaps.init({loadMaps: true}))
+//
+// function javascript(){
+//   return gulp.src(['./js/main.js' ])
+//   .pipe(concat('/bundle.min.js'))
 //   .pipe(terser())
-//   .on('error', log.error)
-//   .pipe(sourcemaps.write('./'))
+//   .pipe(lineEC())
 //   .pipe(gulp.dest('js'))
-//   .pipe(browserSync.stream())
+//   .pipe(browserSync.stream());
 // }
+
+function browif(){
+  let b = browserify({
+    entries: './js/main.js',
+    debug: true,
+    transform:[babelify.configure({
+      presets:['babel-preset-env']
+    })]
+  })
+  return b.bundle()
+  .pipe(source('bundle.min.js'))
+  .pipe(buffer())
+  .pipe(sourcemaps.init({loadMaps: true}))
+  .pipe(terser())
+  .on('error', log.error)
+  .pipe(sourcemaps.write('./'))
+  .pipe(gulp.dest('js'))
+  .pipe(browserSync.stream())
+}
 
 // function browif(){
 //   return gulp.src('./js/main.js')
@@ -113,14 +113,14 @@ function watch(){
     }
   });
   gulp.watch('./scss/**/*.scss', gulp.series([css, concatCSS]));
-  gulp.watch('./js/main.js', javascript); //gulp.series([javascript, browif]));
+  gulp.watch('./js/main.js', browif); //gulp.series([javascript, browif]));
   gulp.watch('./*.html').on('change', browserSync.reload);
 }
 
 exports.css = css;
 exports.concatCSS = concatCSS;
-exports.javascript = javascript;
-// exports.browif = browif;
+// exports.javascript = javascript;
+exports.browif = browif;
 exports.watch = watch;
 
 

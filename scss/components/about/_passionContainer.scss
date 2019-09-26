@@ -1,13 +1,3 @@
-.content--mlarge {
-  margin-top: 14.4rem;
-  @media(max-width: 800px){
-    margin-top: 7.2rem;
-  }
-  @media(max-width: 420px){
-    margin-top: 4rem;
-  }
-}
-
 .passion_list{
   @include flexbox($just: space-between, $wrap: wrap);
   @media(max-width: 800px){
@@ -48,7 +38,7 @@
   text-align: center;
   letter-spacing: 0.2em;
   line-height: 1.2;
-  font-family: "futura_de";
+  font-family: "Asap";
   word-break: break-all;
   @media(max-width: 420px){
     font-size: 1.6rem;

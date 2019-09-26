@@ -2,6 +2,18 @@
   @include bk($bkUrl: url("../img/bay.jpg"));
 }
 
+.wrapper .btn-wrap {
+  margin-top: 12rem;
+  @include flexbox($just: center);
+  & .btn {
+    background: #1f2a5f;
+    color: $white;
+  }
+  @media screen and (max-width: 420px){
+    margin-top: 5rem;
+  }
+}
+
 .meta {
   padding-top: 7.2rem;
   position: relative;
@@ -38,9 +50,15 @@
   }
   & li {
     margin-right: 6.4rem;
+    &:last-child {
+      margin-right: 0;
+    }
     @media screen and (max-width: 420px){
       margin-right: 0;
       margin-bottom: 1.6rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
   & .small-title {
@@ -51,9 +69,20 @@
   }
 }
 
+.text_works {
+  width: 65.5%;
+  @media screen and (max-width: 800px){
+    width: 100%;
+    margin-top: 7.2rem;
+  }
+  @media screen and (max-width: 420px){
+    margin-top: 4rem;
+  }
+}
+
 .big-image {
   width: 100%;
-  height: 116rem;
+  height: 58rem;
   &.one{
     @include bk($bkUrl: url("../img/gameshow.png"));
   }
@@ -75,6 +104,41 @@
   margin-top: 14.4rem;
   @media screen and (max-width: 420px){
     margin-top: 7.2rem;
-    height: 13rem;
+    height: 17rem;
+  }
+}
+
+.back-btn-wrap {
+  text-align: left;
+}
+
+.back-btn {
+  display: inline-block;
+  font-size: 3.2rem;
+  color: #020b16;
+  letter-spacing: 0.2em;
+  position: relative;
+  transition: 0.5s;
+  transform: translate3d(44px, 0, 0);
+  @media screen and (max-width: 420px){
+    font-size: 1.6rem;
+    transform: translate3d(22px, 0, 0);
+  }
+}
+
+.back-btn:after {
+  content: "";
+  width: 64px;
+  height: 2px;
+  background: #020b16;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -88px;
+  margin: auto;
+  transition: 0.5s;
+  @media screen and (max-width: 420px){
+    width: 32px;
+    left: -44px;
   }
 }
